@@ -37,7 +37,7 @@ async def lifespan(app: FastAPI):
 
 # === 初始化 FastAPI 应用 ===
 app = FastAPI(lifespan=lifespan)
-config = uvicorn.Config(app, host="127.0.0.1", port=8000, log_level="info")
+config = uvicorn.Config(app, host="0.0.0.0", port=8000, log_level="info")
 server = uvicorn.Server(config)
 
 # === CORS 设置 ===
